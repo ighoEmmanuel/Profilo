@@ -1,14 +1,8 @@
-import './App.css'
-import Body from './component/body/Body.jsx'
-
-function App() {
+import Portfolio from './component/body/Body.jsx'
 
 
-  return (
-      <>
-        <Body/>
-      </>
-  )
+export default function App() {
+    return (
+            <Portfolio />
+    )
 }
-
-export default App

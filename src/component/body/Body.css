@@ -1,82 +1,23 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-
-.mainWrapper{
-    @apply min-h-screen bg-gray-900 ;
+.about-flex {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
 }
 
-.navBar {
-    @apply flex justify-end items-start px-6 py-4  text-white;
+@media (max-width: 680px) {
+  .about-flex {
+    flex-direction: column;
+    align-items: center;
+    
+  }
+  .about-flex img {
+    margin-bottom: 1rem;
+  
+    width: 140px;
+    height: 140px;
+  }
+  .about-flex p {
+    text-align: center;
+  }
 }
-
-
-.navBar ul {
-    @apply flex flex-row gap-4 md:gap-6;
-}
-
-
-.navBar li {
-    @apply list-none text-white hover:text-gray-300 cursor-pointer;
-}
-
-
-.profile {
-    @apply flex flex-col md:flex-row items-center justify-between mt-10 px-4 md:px-20 gap-6;
-    animation: fadeInUp 0.8s ease-out;
-}
-
-.name {
-    @apply text-white text-[20px] md:text-[28px] font-semibold leading-snug text-center md:text-left;
-    animation: slideInRight 1s ease-out;
-}
-
-.my-image {
-    @apply w-52 h-full md:w-auto md:h-96 border-4 border-white shadow-lg transition-transform duration-500 ease-in-out hover:scale-110;
-}
-
-
-.skillWord{
-    @apply text-center text-white font-semibold;
-}
-
-.javaLogo{
-    @apply w-14 h-16 md:w-auto md:h-32 p-4 ml-28 bg-white rounded-lg shadow-lg ease-in-out hover:scale-110;
-    animation: gradientBackground 6s ease infinite;
-}
-
-@keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        transform: translateY(40px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes slideInRight {
-    0% {
-        opacity: 0;
-        transform: translateX(50px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes gradientBackground {
-    0% {
-        background-color: azure;
-    }
-    50% {
-        background-color: olivedrab;
-    }
-    100% {
-        background-color: blue;
-    }
-}
-
