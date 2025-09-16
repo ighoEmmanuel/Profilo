@@ -1,8 +1,9 @@
-import { Canvas, useFrame, useThree } from "@react-three/fiber";
+import { Canvas,  useThree } from "@react-three/fiber";
 import { OrbitControls, Text } from "@react-three/drei";
-import { useMemo, useRef, useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import "../body/Body.css";
 import emailjs from "emailjs-com";
+import image from "../../../public/assets/Screenshot from 2025-09-16 17-50-35.png"
 function Navbar() {
   return (
     <nav
@@ -146,6 +147,69 @@ function AboutMe() {
 }
 
 
+function Work() {
+    return (
+        <section
+            id="work"
+            style={{
+                position: "relative",
+                zIndex: 3,
+                margin: "0 auto",
+                maxWidth: 900,
+                color: "white",
+                padding: "6rem 1.25rem",
+            }}
+        >
+            <h2 style={{ fontSize: 28, marginBottom: 12, textAlign: "center" }}>My Work</h2>
+            <div
+                style={{
+                    backgroundColor: "#1a1a1a",
+                    borderRadius: "10px",
+                    padding: "20px",
+                    marginTop: "20px",
+                    textAlign: "center",
+                    boxShadow: "0 4px 6px rgba(0,0,0,0.3)",
+                }}
+            >
+                <img
+                    src={image}
+                    alt="Auction App Preview"
+                    style={{
+                        width: "100%",
+                        maxWidth: "600px",
+                        borderRadius: "10px",
+                        marginBottom: "15px",
+                    }}
+                />
+                <h3 style={{ fontSize: 22, marginBottom: 10 }}>Auction App</h3>
+                <p style={{ opacity: 0.9, lineHeight: 1.6 }}>
+                    A full-featured auction platform where users can upload products,
+                    start auctions, and place live bids in real-time.
+                    It demonstrates authentication, cloud image uploads,
+                    state management, and smooth frontend–backend integration.
+                </p>
+                <a
+                    href="https://my-auction-app-front-end.vercel.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{
+                        display: "inline-block",
+                        marginTop: "15px",
+                        padding: "10px 20px",
+                        backgroundColor: "#007bff",
+                        color: "white",
+                        borderRadius: "5px",
+                        textDecoration: "none",
+                        fontWeight: "bold",
+                    }}
+                >
+                    View Project
+                </a>
+            </div>
+        </section>
+    );
+}
+
 
 
 function ContactMe() {
@@ -209,7 +273,7 @@ function ContactMe() {
             padding: "0.75rem",
             borderRadius: 8,
             border: "1px solid #ccc",
-            fontSize: 16,
+            fontSize: 16, color: "black",
           }}
         />
         <label htmlFor="senderEmail" style={{fontSize: 20}}>Your Email</label>
@@ -223,7 +287,7 @@ function ContactMe() {
             padding: "0.75rem",
             borderRadius: 8,
             border: "1px solid #ccc",
-            fontSize: 16,
+            fontSize: 16, color: "black"
           }}
         />
 
@@ -238,7 +302,7 @@ function ContactMe() {
             padding: "0.75rem",
             borderRadius: 8,
             border: "1px solid #ccc",
-            fontSize: 16,
+            fontSize: 16, color: "black"
           }}
         />
       
@@ -256,7 +320,7 @@ function ContactMe() {
             borderRadius: 8,
             border: "1px solid #ccc",
             fontSize: 16,
-            resize: "vertical",
+            resize: "vertical", color: "black"
           }}
         />
         <button
@@ -301,6 +365,7 @@ export default function Portfolio() {
 
      
       <AboutMe />
+        <Work/>
         <ContactMe />
 
     </div>
